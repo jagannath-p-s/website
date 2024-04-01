@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clickbait Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .thumbnail {
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reason {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #999;
+        }
+
+        .input-url {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Clickbait Detection</h1>
+        <form id="url-form">
+            <input type="text" id="url-input" class="input-url" placeholder="Enter YouTube video URL...">
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <div id="result-section" style="display: none;">
+            <img src="" alt="Thumbnail" id="thumbnail" class="thumbnail">
+            <div class="result" id="result"></div>
+            <div class="reason" id="reason"></div>
+        </div>
+        <div class="footer">
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('url-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var url = document.getElementById('url-input').value;
+            fetch('/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({url: url})
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('thumbnail').src = data.thumbnail_url;
+                document.getElementById('result').innerText = data.result;
+                document.getElementById('reason').innerText = data.reason;
+                document.getElementById('result-section').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

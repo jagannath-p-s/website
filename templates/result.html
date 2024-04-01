@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clickbait Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .thumbnail {
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reason {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Clickbait Detection Result</h1>
+        <img src="{{ thumbnail_url }}" alt="Thumbnail" class="thumbnail">
+        <div class="result">
+            <h2>{{ result }}</h2>
+        </div>
+        <div class="reason">
+            <p>{{ reason }}</p>
+        </div>
+        <div class="footer">
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
