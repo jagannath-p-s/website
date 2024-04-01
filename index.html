@@ -1,772 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @font-face { 
-  font-family:'icomoon';
-  src:url('https://cdn0070.qrcodechimp.com/assets/css/fonts/icomoon.eot?nw61bq');
-  src:url('https://cdn0070.qrcodechimp.com/assets/css/fonts/icomoon.eot?nw61bq#iefix') format('embedded-opentype'),
-    url('https://cdn0070.qrcodechimp.com/assets/css/fonts/icomoon.ttf?nw61bq') format('truetype'),
-    url('https://cdn0070.qrcodechimp.com/assets/css/fonts/icomoon.woff?nw61bq') format('woff'),
-    url('https://cdn0070.qrcodechimp.com/assets/css/fonts/icomoon.svg?nw61bq#icomoon') format('svg');
-  font-weight:normal;
-  font-style:normal;
-  font-display:block;
-} 
-  body {  
-    background:#fff;
-    font-size:14px;
-    color:var(--primary-black);
-    font-family:'Work Sans', verdana, helvetica, "Dejavu Sans", "Segoe UI", sans-serif;
-    background-image:url(https://cdn0070.qrcodechimp.com/images/bg_homepage.svg);
-    line-height:1.15;
-  }  
-* { 
-    box-sizing: border-box;
-} 
-
-body { 
-    min-height: 100%; 
-    background: #fff; 
-    font-size: 14px; 
-    color: var(--primary-black); 
-    font-family: 'Work Sans', verdana, helvetica, "Dejavu Sans", "Segoe UI", sans-serif; 
-    overflow-x: hidden; 
-    background-image: url(https://cdn0070.qrcodechimp.com/images/bg_homepage.svg); 
-    background-repeat: no-repeat; 
-    background-position: right top;
-} 
-
-body { 
-    background: #fff; 
-    font-size: 14px; 
-    color: var(--qrc-black); 
-    margin: 0; 
-    padding: 0;
-} 
-
-body { 
-    background-size: cover; 
-    background-position: top left; 
-    background-color: var(--qrc-secondary);
-} 
-
-body { 
-    overflow: auto !important;
-} 
-
-html { 
-    scroll-behavior: smooth;
-} 
-
-html { 
-    line-height: 1.15;
-} 
-
-:root { 
-    --primary-color: #4d77fa;
-} 
-
-:root { 
-    --primary-black: #061244;
-} 
-
-:root { 
-    --hightlight-color: #FF9190;
-} 
-
-:root { 
-    --qrc-secondary: #000000;
-} 
-
-:root { 
-    --qrc-primary: #333333;
-} 
-
-:root { 
-    --qrc-text-primary: #333333;
-} 
-
-:root { 
-    --qrc-text-secondary: #656b6c;
-} 
-
-:root { 
-    --qrc-profile-primary: #ffffff;
-} 
-
-:root { 
-    --qrc-profile-secondary: #ffffff;
-} 
-
-:root { 
-    --qrc-card-bg: #ffffff;
-} 
-
-:root { 
-    --qrc-border-radius: 16px;
-} 
-
-:root { 
-    --qrc-box-shadow: 0px 7px 29px 0px #64646f33;
-} 
-
-.qrc-2wp { 
-    max-width: 420px; 
-    margin: auto; 
-    position: relative; 
-    padding: 15px 15px 1px 15px; 
-    -webkit-border-top-left-radius: var(--qrc-border-radius); 
-    -webkit-border-top-right-radius: var(--qrc-border-radius); 
-    -moz-border-radius-topleft: var(--qrc-border-radius); 
-    -moz-border-radius-topright: var(--qrc-border-radius); 
-    border-top-left-radius: var(--qrc-border-radius); 
-    border-top-right-radius: var(--qrc-border-radius); 
-    padding-bottom: 90px; 
-    z-index: 9;
-} 
-
-.qrc-2wp { 
-    padding-top: 0;
-} 
-
-*,:after,:before { 
-    box-sizing: border-box;
-} 
-
-.profile-n8f { 
-    max-width: 420px; 
-    background: #fff; 
-    padding-bottom: 15px;
-} 
-
-.profile-n8f { 
-    background-color: var(--qrc-secondary); 
-    border-radius: 18px; 
-    margin: 15px 0 0 0; 
-    border-radius: var(--qrc-border-radius); 
-    overflow: hidden; 
-    box-shadow: rgb(255 255 255 / 15%) 0px 0px 3px 0px, rgb(255 255 255 / 15%) 0px 8px 16px -8px;
-} 
-
-.text-x9d { 
-    text-align: center; 
-    padding: 15px 20px; 
-    margin: 15px 0;
-} 
-
-.card-8sn { 
-    background-color: var(--qrc-card-bg); 
-    border-radius: var(--qrc-border-radius); 
-    box-shadow: var(--qrc-box-shadow);
-} 
-
-.qrc-fvh { 
-    text-align: left; 
-    padding: 15px; 
-    margin: 15px 0;
-} 
-
-.gallery-fdf { 
-    padding: 0 15px 15px 15px; 
-    margin: 15px 0; 
-    overflow: hidden;
-} 
-
-.profile-648 { 
-    padding-top: 100px;
-} 
-
-.profile-n8f .profile-648  { 
-    padding-top: 0;
-} 
-
-h2 { 
-    font-size: 36px; 
-    font-weight: 700;
-} 
-
-h2 { 
-    margin: 0; 
-    margin-bottom: 0.5rem;
-} 
-
-.text-x9d h2  { 
-    color: var(--qrc-text-primary); 
-    font-size: 28px; 
-    margin: 0 0 8px 0;
-} 
-
-p { 
-    margin-bottom: 1rem;
-} 
-
-.text-x9d p  { 
-    font-size: 20px; 
-    color: var(--qrc-text-secondary); 
-    margin: 0; 
-    word-break: break-word;
-} 
-
-.header-s6m { 
-    display: flex; 
-    align-items: center; 
-    border-bottom: dashed 1px #ECEDF7; 
-    padding-bottom: 15px; 
-    margin-bottom: 30px;
-} 
-
-.info-ct5 { 
-    margin-bottom: 20px;
-} 
-
-.info-5af { 
-    margin-bottom: 20px;
-} 
-
-.info-s5l { 
-    margin-bottom: 20px;
-} 
-
-.wrapper-38y { 
-    margin: 0px -15px -20px -15px;
-} 
-
-.list-sk5 { 
-    margin: 0; 
-    padding: 0;
-} 
-
-.profile-jqs { 
-    width: 194px; 
-    height: 194px; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    border-radius: 200px; 
-    margin: auto;
-} 
-
-.profile-jqs { 
-    position: relative; 
-    background-position: center;
-} 
-
-.profile-n8f .profile-jqs  { 
-    height: 464px; 
-    width: 100%; 
-    border-radius: 0;
-} 
-
-.profile-d9v { 
-    padding: 0 15px; 
-    margin-top: -180px; 
-    position: relative;
-} 
-
-.profile-d9v { 
-    margin-top: -228px;
-} 
-
-.qrc-p5e { 
-    width: 52px; 
-    height: 52px; 
-    background-size: cover; 
-    border-radius: 50px; 
-    flex-shrink: 0;
-} 
-
-.text-mz4 { 
-    font-size: 20px; 
-    margin-left: 15px; 
-    color: var(--qrc-text-primary);
-} 
-
-.title-vjt { 
-    font-size: 20px; 
-    color: var(--qrc-text-primary);
-} 
-
-.qrc-776 { 
-    color: var(--qrc-text-secondary);
-} 
-
-.title-wih { 
-    font-size: 20px; 
-    color: var(--qrc-text-primary);
-} 
-
-.qrc-9fx { 
-    color: var(--qrc-text-secondary);
-} 
-
-.title-ntt { 
-    font-size: 20px; 
-    color: var(--qrc-text-primary);
-} 
-
-.text-rg8 { 
-    color: var(--qrc-text-secondary);
-} 
-
-a { 
-    color: var(--primary-color);
-} 
-
-a { 
-    text-decoration: none;
-} 
-
-.btn-i1w { 
-    background-color: var(--qrc-primary); 
-    color: #fff; 
-    padding: 10px 20px; 
-    border-radius: 25px; 
-    margin-top: 10px; 
-    display: inline-block;
-} 
-
-a:hover { 
-    color: var(--hightlight-color);
-} 
-
-a:hover { 
-    color: unset; 
-    text-decoration: none;
-} 
-
-.btn-i1w:hover { 
-    text-decoration: none; 
-    color: #fff;
-} 
-
-.gallery-i27 { 
-    margin: 0; 
-    padding: 0; 
-    border-radius: var(--qrc-border-radius); 
-    overflow: hidden;
-} 
-
-.list-sk5 li  { 
-    margin: 15px 0; 
-    padding: 15px; 
-    list-style: none;
-} 
-
-.qrc_profile_3_svg { 
-    position: absolute; 
-    bottom: -1px;
-} 
-
-.profile-n8f h2  { 
-    font-size: 52px; 
-    font-weight: 400; 
-    margin: 20px 0 5px 0; 
-    line-height: 54px;
-} 
-
-.profile-n8f h2  { 
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.3); 
-    color: var(--qrc-profile-primary); 
-    font-size: 44px; 
-    line-height: 46px; 
-    word-break: break-word;
-} 
-
-.profile-n8f p  { 
-    font-size: 18px;
-} 
-
-.profile-n8f p  { 
-    color: var(--qrc-profile-secondary);
-} 
-
-.profile-t2o { 
-    margin: 30px 0 0 0;
-} 
-
-.qrc-776 a  { 
-    color: var(--qrc-text-secondary); 
-    text-decoration: none;
-} 
-
-.qrc-9fx a  { 
-    color: var(--qrc-text-secondary); 
-    text-decoration: none;
-} 
-
-[class^="icon-"] { 
-    font-family: 'icomoon' !important; 
-    font-style: normal; 
-    font-weight: normal; 
-    font-variant: normal; 
-    text-transform: none; 
-    line-height: 1; 
-    -webkit-font-smoothing: antialiased; 
-    -moz-osx-font-smoothing: grayscale;
-} 
-
-.btn-i1w span  { 
-    margin-right: 0.325rem;
-} 
-
-.icon-9is:before { 
-    content: "\e9d0";
-} 
-
-[class^="icon-"]:before, [class*=" icon-"]::before { 
-    top: unset;
-} 
-
-.gallery-i27 li  { 
-    margin: 0 0 8px 0; 
-    padding: 0; 
-    list-style: none; 
-    width: 100%; 
-    position: relative; 
-    background-size: cover;
-} 
-
-.gallery-i27 li  { 
-    padding-top: 0px;
-} 
-
-.gallery-i27 li:last-child  { 
-    margin: 0 0 0px 0; 
-    -webkit-border-bottom-right-radius: var(--qrc-border-radius); 
-    -webkit-border-bottom-left-radius: var(--qrc-border-radius); 
-    -moz-border-radius-bottomright: var(--qrc-border-radius); 
-    -moz-border-radius-bottomleft: var(--qrc-border-radius); 
-    border-bottom-right-radius: var(--qrc-border-radius); 
-    border-bottom-left-radius: var(--qrc-border-radius);
-} 
-
-.qrc-b55 { 
-    text-align: center; 
-    border-bottom: dashed 1px #ECEDF7; 
-    margin-bottom: 15px; 
-    padding: 15px 0;
-} 
-
-.list-sk5 li a  { 
-    display: flex; 
-    align-items: center;
-} 
-
-.list-sk5 li a:hover { 
-    text-decoration: none;
-} 
-
-.profile-gyw img  { 
-    max-width: 160px; 
-    max-height: 60px;
-} 
-
-.profile-t2o ul  { 
-    margin: 0; 
-    padding: 0;
-} 
-
-.qrc-b55 h2  { 
-    color: var(--qrc-text-primary); 
-    font-size: 28px; 
-    margin: 0 0 8px 0;
-} 
-
-.qrc-b55 p  { 
-    font-size: 20px; 
-    color: var(--qrc-text-secondary); 
-    margin: 0;
-} 
-
-.icon-1dc { 
-    width: 52px; 
-    height: 52px; 
-    background-size: cover; 
-    border-radius: 50px;
-} 
-
-.text-gng { 
-    width: calc(100% - 110px); 
-    margin: 0 15px; 
-    text-align: left;
-} 
-
-.qrc-d8e { 
-    font-size: 20px; 
-    color: var(--qrc-primary);
-} 
-
-.profile-t2o ul li  { 
-    margin: 4px; 
-    padding: 0; 
-    list-style: none; 
-    display: inline-block; 
-    border-radius: 60px; 
-    width: 60px; 
-    height: 60px; 
-    font-size: 28px; 
-    color: var(--qrc-primary);
-} 
-
-.profile-t2o ul li  { 
-    text-align: center; 
-    background: var(--qrc-primary); 
-    color: #fff; 
-    padding-top: 0px;
-} 
-
-.gallery-i27 li img  { 
-    width: 100%;
-} 
-
-.text-399 { 
-    font-size: 20px; 
-    color: var(--qrc-text-primary); 
-    overflow-wrap: break-word;
-} 
-
-.text-g3v { 
-    font-size: 14px; 
-    color: var(--qrc-text-secondary);
-} 
-
-.icon-nsl:before { 
-    content: "\e907";
-} 
-
-[class^="icon-"]::before, [class*=" icon-"]::before { 
-    top: unset;
-} 
-
-.profile-t2o ul li a  { 
-    align-items: center; 
-    display: flex; 
-    justify-content: center; 
-    height: 100%; 
-    color: var(--qrc-primary);
-} 
-
-.profile-t2o ul li a  { 
-    color: #fff;
-} 
-
-.profile-t2o ul li a:hover { 
-    text-decoration: none; 
-    color: var(--qrc-secondary);
-} 
-
-.profile-t2o ul li a:hover { 
-    color: #fff;
-} 
-
-.icon-2qq:before { 
-    content: "\e9d8";
-} 
-
-.icon-kse:before { 
-    content: "\e903";
-} 
-
-.text-82s:before { 
-    content: "\e9d9";
-} 
-
-
-/* These were inline style tags. Uses id+class to override almost everything */
-#style-Opsm3.style-Opsm3 {  
-   background-image: url('https://www.qrcodechimp.com/images/digitalCard/dbcv2/profile_1.webp');  
-}  
-#style-wRTqg.style-wRTqg {  
-   stop-color: var(--qrc-secondary);  
-}  
-#style-HzCLz.style-HzCLz {  
-   stop-color: var(--qrc-secondary);  
-}  
-#style-AoI6P.style-AoI6P {  
-   background-image: url('/images/digitalCard/contactus.png');  
-}  
-#style-9mrak.style-9mrak {  
-   background-image:url('/images/digitalCard/weblink.png');  
-}  
-
-    </style>
-</head>
-<body>
-    <div class="qrc-2wp">
-        <div class="profile-n8f">
-          <div class="profile-648">
-            <div class="profile-jqs style-Opsm3" id="style-Opsm3">
-              <svg id="Layer_1" class="qrc_profile_3_svg snipcss0-1-1-2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 260">
-                <defs>
-                  <linearGradient>
-                    <stop class="style-wRTqg" id="style-wRTqg">
-                    </stop>
-                    <stop class="style-HzCLz" id="style-HzCLz">
-                    </stop>
-                  </linearGradient>
-                </defs>
-                <rect id="Rectangle_297" data-name="Rectangle 297" class="cls-1" width="375" height="260">
-                </rect>
-              </svg>
-            </div>
-            <div class="profile-d9v">
-              <h2>
-                jagannath p s
-              </h2>
-              <p>
-                my company
-              </p>
-              <p>
-                <strong>
-                  Company
-                </strong>
-              </p>
-              <div class="profile-gyw">
-                <img src="https://www.qrcodechimp.com/images/digitalCard/dbcv2/barand_logo_9.webp">
-              </div>
-              <div class="profile-t2o">
-                <ul>
-                  <li class="card-8sn">
-                    <a href="tel:9645671184">
-                      <span class="icon-2qq">
-                      </span>
-                    </a>
-                  </li>
-                  <li class="card-8sn">
-                    <a href="mailto:youremail@domain.com">
-                      <span class="icon-kse">
-                      </span>
-                    </a>
-                  </li>
-                  <li class="card-8sn">
-                    <a href="sms:9645671184">
-                      <span class="text-82s">
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-x9d card-8sn">
-          <h2>
-            About Me
-          </h2>
-          <p>
-            Description
-          </p>
-        </div>
-        <div class="qrc-fvh card-8sn">
-          <div class="header-s6m">
-            <div class="qrc-p5e style-AoI6P" id="style-AoI6P">
-            </div>
-            <div class="text-mz4">
-              Contact Us
-            </div>
-          </div>
-          <div class="info-ct5">
-            <div class="title-vjt">
-              Call Us
-            </div>
-            <div class="qrc-776">
-              <a href="tel:123 456 7890">
-                123 456 7890
-              </a>
-            </div>
-          </div>
-          <div class="info-5af">
-            <div class="title-wih">
-              Email
-            </div>
-            <div class="qrc-9fx">
-              <a href="mailto:contactme@domain.com">
-                contactme@domain.com
-              </a>
-            </div>
-          </div>
-          <div class="info-s5l">
-            <div class="title-ntt">
-              Address
-            </div>
-            <div class="text-rg8">
-              Street
-              <br>
-              City, State, Zipcode
-              <br>
-              Country
-            </div>
-            <a class="btn-i1w" href="//#">
-              <span class="icon-9is">
-              </span>
-              Direction
-            </a>
-          </div>
-        </div>
-        <div class="gallery-fdf card-8sn">
-          <div class="wrapper-38y">
-            <ul class="gallery-i27">
-              <li>
-                <a href="/images/digitalCard/image_1.png">
-                  <img src="https://www.qrcodechimp.com/images/digitalCard/image_1.png">
-                </a>
-              </li>
-              <li>
-                <a href="/images/digitalCard/image_2.png">
-                  <img src="https://www.qrcodechimp.com/images/digitalCard/image_2.png">
-                </a>
-              </li>
-              <li>
-                <a href="/images/digitalCard/image_1.png">
-                  <img src="https://www.qrcodechimp.com/images/digitalCard/image_1.png">
-                </a>
-              </li>
-              <li>
-                <a href="/images/digitalCard/image_2.png">
-                  <img src="https://www.qrcodechimp.com/images/digitalCard/image_2.png">
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <ul class="list-sk5">
-          </ul>
-        </div>
-        <div>
-          <ul class="list-sk5">
-            <li class="card-8sn">
-              <div class="qrc-b55">
-                <h2>
-                  Web Links
-                </h2>
-                <p>
-                  Description
-                </p>
-              </div>
-              <a href="https://www.yourdomain.com">
-                <div class="icon-1dc style-9mrak" id="style-9mrak">
-                </div>
-                <div class="text-gng">
-                  <div class="text-399">
-                    Title
-                  </div>
-                  <div class="text-g3v">
-                    Sub Title
-                  </div>
-                </div>
-                <div class="qrc-d8e">
-                  <span class="icon-nsl">
-                  </span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-</body>
-</html>
+import google.generativeai as genai
+from pathlib import Path
+import gradio as gr
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from a .env file
+load_dotenv()
+
+# Configure the GenerativeAI API key using the loaded environment variable
+genai.configure(api_key="AIzaSyCZqeMqO_p6aCYzp8AoSpxDtz-Q_1-fEqs")
+
+
+# Set up the model configuration for text generation
+generation_config = {
+    "temperature": 0.4,
+    "top_p": 1,
+    "top_k": 32,
+    "max_output_tokens": 4096,
+}
+
+# Define safety settings for content generation
+safety_settings = [
+    {"category": f"HARM_CATEGORY_{category}", "threshold": "BLOCK_MEDIUM_AND_ABOVE"}
+    for category in ["HARASSMENT", "HATE_SPEECH", "SEXUALLY_EXPLICIT", "DANGEROUS_CONTENT"]
+]
+
+# Initialize the GenerativeModel with the specified model name, configuration, and safety settings
+model = genai.GenerativeModel(
+    model_name="gemini-pro-vision",
+    generation_config=generation_config,
+    safety_settings=safety_settings,
+)
+# Function to read image data from a file path
+def read_image_data(file_path):
+    image_path = Path(file_path)
+    if not image_path.exists():
+        raise FileNotFoundError(f"Could not find image: {image_path}")
+    return {"mime_type": "image/jpeg", "data": image_path.read_bytes()}
+
+# Function to generate a response based on a prompt and an image path
+def generate_gemini_response(prompt, image_path):
+    image_data = read_image_data(image_path)
+    response = model.generate_content([prompt, image_data])
+    return response.text
+
+# Initial input prompt for the plant pathologist
+input_prompt = """
+As a highly skilled plant pathologist, your expertise is indispensable in our pursuit of maintaining optimal plant health. You will be provided with information or samples related to plant diseases, and your role involves conducting a detailed analysis to identify the specific issues, propose solutions, and offer recommendations.
+
+**Analysis Guidelines:**
+
+1. **Disease Identification:** Examine the provided information or samples to identify and characterize plant diseases accurately.
+
+2. **Detailed Findings:** Provide in-depth findings on the nature and extent of the identified plant diseases, including affected plant parts, symptoms, and potential causes.
+
+3. **Next Steps:** Outline the recommended course of action for managing and controlling the identified plant diseases. This may involve treatment options, preventive measures, or further investigations.
+
+4. **Recommendations:** Offer informed recommendations for maintaining plant health, preventing disease spread, and optimizing overall plant well-being.
+
+5. **Important Note:** As a plant pathologist, your insights are vital for informed decision-making in agriculture and plant management. Your response should be thorough, concise, and focused on plant health.
+
+**Disclaimer:**
+*"Please note that the information provided is based on plant pathology analysis and should not replace professional agricultural advice. Consult with qualified agricultural experts before implementing any strategies or treatments."*
+
+Your role is pivotal in ensuring the health and productivity of plants. Proceed to analyze the provided information or samples, adhering to the structured 
+"""
+
+# Function to process uploaded files and generate a response
+def process_uploaded_files(files):
+    file_path = files[0].name if files else None
+    response = generate_gemini_response(input_prompt, file_path) if file_path else None
+    return file_path, response
+
+# Gradio interface setup
+with gr.Blocks() as demo:
+    file_output = gr.Textbox()
+    image_output = gr.Image()
+    combined_output = [image_output, file_output]
+
+    # Upload button for user to provide images
+    upload_button = gr.UploadButton(
+        "Click to Upload an Image",
+        file_types=["image"],
+        file_count="multiple",
+    )
+     # Set up the upload button to trigger the processing function
+    upload_button.upload(process_uploaded_files, upload_button, combined_output)
+
+# Launch the Gradio interface with debug mode enabled
+demo.launch(debug=True)
